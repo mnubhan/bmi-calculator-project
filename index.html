@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BMI Calculator</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <header>
@@ -18,37 +18,69 @@
         </p>
       </div>
       <div class="bmi__calculator">
-        <h4>Enter your details below</h4>
+        <p class="heading__M">Enter your details below</p>
         <form>
           <input type="radio" id="metric" name="measurement" checked />
           <label for="metric">Metric</label>
-          <input type="radio" id="imperial" name="measurement"/>
+          <input type="radio" id="imperial" name="measurement" />
           <label for="imperial">Imperial</label>
-          <label for="height__cm">Height</label>
-          <input type="number" id="height__cm" placehoder="CM"/>
-          <label for="weight__kg">Weight</label>
-          <input type="number" id="weight__kg" />
-          <label for="height__ft">Height</label>
-          <input type="number" id="height__ft"/>
-          <label for="heigth__in"></label>
-          <input type="number" id="heigth__in">
-          <label for="weight__st">Weight</label>
-          <input type="number" id="weight__st"/>
-          <label for="weight__lb"></label>
-          <input type="number" id="weight__lb">
+        </form>
+        <form class="bmi__input">
+          <label>Height</label>
+          <div class="bmi__input-height">
+            <input
+              type="number"
+              id="height__cm"
+              placehoder="CM"
+              class="bmi-calculator__input-height"
+            />
+            <input
+              type="number"
+              id="height__ft"
+              class="bmi-calculator__input-height"
+            />
+            <input
+              type="number"
+              id="heigth__in"
+              class="bmi-calculator__input-height"
+            />
+          </div>
+
+          <label>Weigth</label>
+          <div class="bmi__input-weight">
+            <input
+              type="number"
+              id="weight__kg"
+              class="bmi-calculator__input-weight"
+            />
+            <input
+              type="number"
+              id="weight__st"
+              class="bmi-calculator__input-weight"
+            />
+            <input
+              type="number"
+              id="weight__lb"
+              class="bmi-calculator__input-weight"
+            />
+          </div>
         </form>
         <div class="bmi__calculator_result">
           <div class="bmi__calculator_info">
             <p class="heading__M">Welcome!</p>
-            <p class="body__s">Enter your height and weight and you'll see your BMI result here</p>
+            <p class="body__s">
+              Enter your height and weight and you'll see your BMI result here
+            </p>
           </div>
           <div class="bmi__calculator_value">
             <p class="body__m body__m_bold">Your BMI is..</p>
             <p class="heading__xl">23.4</p>
-
           </div>
           <div class="bmi__calculator_explain">
-            <p class="body__s">Your BMI suggests you're a healthy weight. Your ideal weight is between<span class="body__s_bold"> 63.3kgs-85.2kgs.</span></p>
+            <p class="body__s">
+              Your BMI suggests you're a healthy weight. Your ideal weight is
+              between<span class="body__s_bold"> 63.3kgs-85.2kgs.</span>
+            </p>
           </div>
         </div>
       </div>
