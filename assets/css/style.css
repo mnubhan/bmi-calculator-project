@@ -1,47 +1,58 @@
-:root{
-
+:root {
+}
+input{
+    border: 1px solid red;
+}
+.bmi__calculator {
+  border: 1px dotted red;
 }
 
-.bmi__calculator{
-    border:1px dotted red;
+.height__cm,
+.height__ft,
+.height__in,
+.weight__kg,
+.weight__st,
+.weight__lb,
+.bmi-calculator__input-height,
+.bmi-calculator__input-weight {
+  position: relative;
 }
 
-.height__cm,.height__ft,.height__in ,.weight__kg, .weight__st,.white__lb,.bmi-calculator__input-height,.bmi-calculator__input-weight {
-    position:relative;
+.height__cm::after {
+  content: "cm";
+  position: absolute;
+  right: 5%;
 }
 
-.height__cm::after{
-    content:'cm';
-    position:absolute;
-    right:5%;
+.height__ft::after {
+  content: "ft";
+  position: absolute;
+  right: 5%;
 }
 
-.height__ft::after{
-    content:'ft';
-    position:absolute;
-    right:5%;
+.height__in::after {
+  content: "in";
+  position: absolute;
+  right: 5%;
 }
 
-.height__in::after{
-    content:'in';
-    position:absolute;
-    right:5%;
+.weight__kg::after {
+  content: "kg";
+  position: absolute;
+  right: 5%;
 }
 
-.weight__kg::after{
-    content:'kg';
-    position:absolute;
-    right:5%;
+
+
+.weight__st::after {
+  content: "st";
+  position: absolute;
+  right: 5%;
 }
 
-.weight__lb::after{
-    content:'lb';
-    position:absolute;
-    right:5%;
-}
+.weight__lb::after {
+    content: "lb";
+    position: absolute;
+    right: 5%;
+  }
 
-.weight__st:after{
-    content:'st';
-    position:absolute;
-    right:5%;
-}
