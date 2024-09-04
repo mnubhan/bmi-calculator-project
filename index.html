@@ -19,13 +19,13 @@
       </div>
       <div class="bmi__calculator">
         <p class="heading__M">Enter your details below</p>
-        <form>
+        <form class="form__measurement">
           <input type="radio" id="metric" name="measurement" checked />
           <label for="metric">Metric</label>
           <input type="radio" id="imperial" name="measurement" />
           <label for="imperial">Imperial</label>
         </form>
-        <form class="bmi__input">
+        <form class="form__bmi">
           <label>Height</label>
           <div class="bmi__input-height">
             <label class="height__cm">
@@ -76,6 +76,7 @@
               />
             </label>
           </div>
+          <button type="submit">Submit</button>
         </form>
         <div class="bmi__calculator_result">
           <div class="bmi__calculator_info">

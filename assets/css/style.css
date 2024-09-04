@@ -1,7 +1,11 @@
 :root {
 }
 input{
-    border: 1px solid red;
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
 }
 .bmi__calculator {
   border: 1px dotted red;
