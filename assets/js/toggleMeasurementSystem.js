@@ -1,4 +1,12 @@
-export function toggleMeasurementSystem(isMetric,weightSt,weightLb,weightKg,heightCm,heightFt,heightIn) {
+export function toggleMeasurementSystem(
+  isMetric,
+  weightSt,
+  weightLb,
+  weightKg,
+  heightCm,
+  heightFt,
+  heightIn
+) {
   if (isMetric) {
     weightSt.setAttribute("hidden", true);
     weightLb.setAttribute("hidden", true);
