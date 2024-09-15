@@ -7,6 +7,7 @@ input{
 input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
     -webkit-appearance: none;
 }
+
 .bmi__calculator {
   border: 1px dotted red;
 }
@@ -59,4 +60,14 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
     position: absolute;
     right: 5%;
   }
+
+.alert__input{
+  border: 1px solid red;
+}
+
+.alert__message{
+  margin: 0;
+  color:red;
+  font-size: 0.8rem;
+}
 
