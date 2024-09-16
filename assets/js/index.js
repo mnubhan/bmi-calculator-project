@@ -1,7 +1,8 @@
 import { toggleMeasurementSystem } from "./toggleMeasurementSystem.js";
 import { calculateBmiMetric } from "./calculateBmiMetric.js";
 import { calculateBmiImperial } from "./calculateBmiImperial.js";
-import removeAlert from "./removeAlert.js";
+import removeAlertMessage from "./removeAlertMessage.js";
+import removeAlertInput from "./removeAlertInput.js"
 let imperial = document.querySelector("#imperial");
 let metric = document.querySelector("#metric");
 let weightStInput = document.getElementById("weight__st");
@@ -34,7 +35,13 @@ inputElements.forEach((input) => {
       }
     }
     if (!isNaN(parseInt(event.key))) {
-      removeAlert(event.target);
+      if(event.target.parentNode.parentNode.classList.contains("bmi__input-height")){
+        [heightCmInput,heightFtInput,heightInInput].forEach((element)=>{removeAlertInput(element)});
+      }
+      if(event.target.parentNode.parentNode.classList.contains("bmi__input-weight")){
+        [weightKgInput,weightStInput,weightLbInput].forEach((element)=>{removeAlertInput(element)});
+      }
+      removeAlertMessage(event.target);
     }
   };
 });

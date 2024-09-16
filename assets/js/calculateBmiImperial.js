@@ -1,14 +1,19 @@
 import {emptyInput} from "./emptyInput.js"
-import { alertUnfilledField } from "./alertUnfilledField.js";
-
+import { addAlertMessage } from "./addAlertMessage.js";
+import alertInput from "./alertInput.js"
 const calculateBmiImperial = (inches,ft,lb,st)=>{
     if((inches.value === "" && ft.value === "" )|| (lb.value === "" && st.value === "")){
-        if(inches.value === "" && ft.value === "" ){
-            alertUnfilledField(inches);
-        }
         if(lb.value === "" && st.value === ""){
-            alertUnfilledField(st);
+            let weightInputDiv = document.querySelector(".bmi__input-weight");
+            addAlertMessage(weightInputDiv);
+            [lb,st].forEach((element)=>{alertInput(element)})
         }
+        if(inches.value === "" && ft.value === "" ){
+            let heightInputDiv = document.querySelector(".bmi__input-height");
+            addAlertMessage(heightInputDiv);
+            [inches,ft].forEach((element)=>{alertInput(element)})
+        }
+       
     }
     else{
         let heightIn= inches.value + ft.value * 12;
