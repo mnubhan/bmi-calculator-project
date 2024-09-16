@@ -1,5 +1,6 @@
 import { toggleMeasurementSystem } from "./toggleMeasurementSystem.js";
 import { calculateBmiMetric } from "./calculateBmiMetric.js";
+import { calculateBmiImperial } from "./calculateBmiImperial.js";
 import removeAlert from "./removeAlert.js";
 let imperial = document.querySelector("#imperial");
 let metric = document.querySelector("#metric");
@@ -10,29 +11,30 @@ let heightCmInput = document.getElementById("height__cm");
 let heightFtInput = document.getElementById("height__ft");
 let heightInInput = document.getElementById("height__in");
 const inputElements = document.querySelectorAll("input");
-const measurementTypeList = [imperial,metric];
+const measurementTypeList = [imperial, metric];
 
-measurementTypeList.forEach(measurement=>{
+measurementTypeList.forEach((measurement) => {
   measurement.onclick = () => {
     toggleMeasurementSystem(measurement.id);
-  }
-})
+  };
+});
 
-inputElements.forEach(input=>{
-  input.onkeyup = event => {
-    if (event.key.toLowerCase()==="enter"){
-      if(metric.checked){
-        calculateBmiMetric(weightKgInput,heightCmInput)
-      }
-      else if(imperial.checked){
-        console.log("st",weightStInput.value);
-        console.log("lb",weightLbInput.value);
-        console.log("ft",heightFtInput.value);
-        console.log("in",heightInInput.value);
+inputElements.forEach((input) => {
+  input.onkeyup = (event) => {
+    if (event.key.toLowerCase() === "enter") {
+      if (metric.checked) {
+        calculateBmiMetric(weightKgInput, heightCmInput);
+      } else if (imperial.checked) {
+        calculateBmiImperial(
+          heightInInput,
+          heightFtInput,
+          weightLbInput,
+          weightStInput
+        );
       }
     }
-    if(!isNaN(parseInt(event.key))){
+    if (!isNaN(parseInt(event.key))) {
       removeAlert(event.target);
     }
-  }
-})
+  };
+});
