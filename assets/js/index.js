@@ -1,5 +1,6 @@
 import { toggleMeasurementSystem } from "./toggleMeasurementSystem.js";
 import { calculateBmiMetric } from "./calculateBmiMetric.js";
+import removeAlert from "./removeAlert.js";
 let imperial = document.querySelector("#imperial");
 let metric = document.querySelector("#metric");
 let weightStInput = document.getElementById("weight__st");
@@ -22,6 +23,7 @@ inputElements.forEach(input=>{
     if (event.key.toLowerCase()==="enter"){
       if(metric.checked){
         calculateBmiMetric(weightKgInput,heightCmInput)
+        //console.log("kg",weightKgInput.value);
       }
       else if(imperial.checked){
         console.log("st",weightStInput.value);
@@ -29,6 +31,11 @@ inputElements.forEach(input=>{
         console.log("ft",heightFtInput.value);
         console.log("in",heightInInput.value);
       }
+    }
+    //console.log("keyboard key",!isNaN(parseInt(event.key)));
+    if(!isNaN(parseInt(event.key))){
+      console.log("keyboard key",event.target.classList.contains("alert__input"));
+      removeAlert(event.target);
     }
   }
 })
