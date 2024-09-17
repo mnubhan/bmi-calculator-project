@@ -1,6 +1,7 @@
 import {emptyInput} from "./emptyInput.js"
 import { addAlertMessage } from "./addAlertMessage.js";
 import alertInput from "./alertInput.js"
+const bmiValueElement = document.querySelector(".bmi__value");
 const calculateBmiImperial = (inches,ft,lb,st)=>{
     if((inches.value === "" && ft.value === "" )|| (lb.value === "" && st.value === "")){
         if(lb.value === "" && st.value === ""){
@@ -20,7 +21,7 @@ const calculateBmiImperial = (inches,ft,lb,st)=>{
         let weightLb = (lb.value + st.value * 14)*703;
         let bmiResult = (weightLb / Math.pow(heightIn,2)).toFixed(2);
         emptyInput([inches,ft,lb,st]);
-        return bmiResult;
+        bmiValueElement.textContent= bmiResult;
     }
 }
 
