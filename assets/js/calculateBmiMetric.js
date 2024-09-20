@@ -3,6 +3,9 @@ import { addAlertMessage } from "./addAlertMessage.js";
 import alertInput from "./alertInput.js";
 const bmiValueElement = document.querySelector(".bmi__value");
 const weightHealthyRange = document.querySelector(".weight__healthy-range");
+const bmiCalcultorValue = document.querySelector(".bmi__calculator_value");
+const bmiCalculatorExplain = document.querySelector(".bmi__calculator_explain");
+const bmiCalculatorInfo = document.querySelector(".bmi__calculator_info");
 const calculateBmiMetric = (weight, height) => {
   if (weight.value === "" || height.value === "") {
     if (weight.value === "") {
@@ -22,6 +25,9 @@ const calculateBmiMetric = (weight, height) => {
     let idealWeightRange = `${minimumIdealWeight}kgs - ${maximumIdealWeight}kgs`;
     bmiValueElement.textContent = bmiResult;
     weightHealthyRange.textContent = idealWeightRange;
+    bmiCalcultorValue.removeAttribute("hidden");
+    bmiCalculatorExplain.removeAttribute("hidden");
+    bmiCalculatorInfo.setAttribute("hidden",true);
     emptyInput([weight, height]);
   }
 };
