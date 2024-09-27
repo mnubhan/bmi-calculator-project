@@ -1,6 +1,5 @@
 :root {
 }
-
 input{
     cursor: pointer;
 }
@@ -9,8 +8,28 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
     -webkit-appearance: none;
 }
 
+@media screen and (max-width:375px){
+  .bmi__calculator{
+    
+  }
+  #height__cm,#weight__kg{
+    width:17.5rem;
+    height:4rem;
+  }
+  #height__ft,#height__in,#weight__st,#weight__lb{
+    width:8.25rem;
+    height:4rem;
+  }
+}
+
+
 .bmi__calculator {
   border: 1px dotted red;
+  
+}
+.form__measurement{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
 }
 
 .height__cm,
@@ -71,4 +90,3 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
   color:red;
   font-size: 0.8rem;
 }
-

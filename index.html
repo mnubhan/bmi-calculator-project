@@ -23,10 +23,14 @@
       <div class="bmi__calculator">
         <p class="heading__M">Enter your details below</p>
         <form class="form__measurement">
-          <input type="radio" id="metric" name="measurement" checked />
-          <label for="metric">Metric</label>
-          <input type="radio" id="imperial" name="measurement" />
-          <label for="imperial">Imperial</label>
+          <div>
+            <input type="radio" id="metric" name="measurement" checked />
+            <label for="metric">Metric</label>
+          </div>
+          <div>
+            <input type="radio" id="imperial" name="measurement" />
+            <label for="imperial">Imperial</label>
+          </div>
         </form>
         <form class="form__bmi">
           <label>Height</label>
@@ -93,7 +97,10 @@
           <div class="bmi__calculator_explain" hidden>
             <p class="body__s bmi__explain">
               Your BMI suggests you're a healthy weight. Your ideal weight is
-              between <span class="body__s_bold weight__healthy-range">63.3kgs-85.2kgs</span>.
+              between
+              <span class="body__s_bold weight__healthy-range"
+                >63.3kgs-85.2kgs</span
+              >.
             </p>
           </div>
         </div>
