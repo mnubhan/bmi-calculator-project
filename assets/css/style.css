@@ -8,28 +8,15 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
     -webkit-appearance: none;
 }
 
-@media screen and (max-width:375px){
-  .bmi__calculator{
-    
-  }
-  #height__cm,#weight__kg{
-    width:17.5rem;
-    height:4rem;
-  }
-  #height__ft,#height__in,#weight__st,#weight__lb{
-    width:8.25rem;
-    height:4rem;
-  }
-}
-
 
 .bmi__calculator {
   border: 1px dotted red;
-  
+  padding:2rem;
 }
 .form__measurement{
   display:grid;
   grid-template-columns:repeat(2,1fr);
+  width:100%;
 }
 
 .height__cm,
@@ -47,24 +34,32 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
   content: "cm";
   position: absolute;
   right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .height__ft::after {
   content: "ft";
   position: absolute;
   right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .height__in::after {
   content: "in";
   position: absolute;
   right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .weight__kg::after {
   content: "kg";
   position: absolute;
   right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 
@@ -73,12 +68,16 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
   content: "st";
   position: absolute;
   right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .weight__lb::after {
     content: "lb";
     position: absolute;
     right: 5%;
+    top: 50%;
+  transform: translateY(-50%);
   }
 
 .alert__input{
@@ -89,4 +88,29 @@ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
   margin: 0;
   color:red;
   font-size: 0.8rem;
+}
+input{
+  margin:0.25rem;
+}
+/* .heigth__ft,.height__in,.weight__st,.weight__lb{
+  margin:0.25rem;
+} */
+@media screen and (max-width:375px){
+  .bmi__calculator{
+    display:flex;
+    flex-flow:column nowrap;;
+    align-items:center;
+  }
+  .form__measurement{
+    margin:1.5rem;
+  }
+  
+  #height__cm,#weight__kg{
+    width:17.5rem;
+    height:4rem;
+  }
+  #height__ft,#height__in,#weight__st,#weight__lb{
+    width:8.25rem;
+    height:4rem;
+  }
 }
