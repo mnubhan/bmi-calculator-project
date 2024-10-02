@@ -12,17 +12,17 @@ export function toggleMeasurementSystem(typeMeasurement) {
   let metricParams = [weightKg, heightCm];
   if (typeMeasurement === "metric") {
     imperialParams.forEach((element) => {
-      element.setAttribute("hidden", true);
+      element.style.setProperty("display", "none");
     });
     metricParams.forEach((element) => {
-      element.removeAttribute("hidden");
+      element.style.setProperty("display", "block");
     });
   } else {
     imperialParams.forEach((element) => {
-      element.removeAttribute("hidden");
+      element.style.setProperty("display", "inline-block");
     });
     metricParams.forEach((element) => {
-      element.setAttribute("hidden", true);
+      element.style.setProperty("display", "none");
     });
     metricParams.concat(imperialParams).forEach((element) => {
       element.children[0].value = "";
