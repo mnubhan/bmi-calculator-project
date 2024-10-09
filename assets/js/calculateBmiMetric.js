@@ -25,9 +25,8 @@ const calculateBmiMetric = (weight, height) => {
     let idealWeightRange = `${minimumIdealWeight}kgs - ${maximumIdealWeight}kgs`;
     bmiValueElement.textContent = bmiResult;
     weightHealthyRange.textContent = idealWeightRange;
-    bmiCalcultorValue.removeAttribute("hidden");
-    bmiCalculatorExplain.removeAttribute("hidden");
-    bmiCalculatorInfo.setAttribute("hidden",true);
+    [bmiCalcultorValue,bmiCalculatorExplain].forEach(element=>element.style.setProperty("display","block"));;
+    bmiCalculatorInfo.style.setProperty("display","none");
     emptyInput([weight, height]);
   }
 };
