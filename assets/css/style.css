@@ -1,22 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
+  --pure-white: #fff;
+  --blue: #345FF6;
+  --heading-xl:4rem;
+  --heading-l:3rem;
+  --heading-m:1.5rem;
+  --heading-s:1.25rem;
+  --body-m:1rem;
+  --body-s:0.875rem;
 }
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}
-input {
-  cursor: pointer;
+  font-family: 'Inter', sans-serif;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+*::after {
+  font-size:var(--heading-m);
+  color:var(--blue);
+}
+
+.heading__xl,.heading__l,.heading__m,.heading__s{
+  font-weight:bold;
+}
+
+.heading__xl{
+  font-size:var(--heading-xl);
+}
+
+.heading__l{
+  font-size:var(--heading-l);
+}
+
+.heading__m{
+  font-size:var(--heading-m);
+}
+
+.heading__s{
+  font-size:var(--heading-s)
+}
+
+.body__m{
+  font-size:var(--body-m);
+}
+
+.body__m_bold{
+  font-size:bold;
+}
+
+.body__s{
+  font-size:var(--body-s);
 }
 
 .form__bmi {
   width: 100%;
 }
+
 .bmi__input-height,.bmi__input-weight {
   display: grid;
   grid-auto-columns:1fr;
@@ -33,18 +75,28 @@ input::-webkit-inner-spin-button {
   height: 4rem;
   width: 100%;
 }
+
 .weight__kg,.height__cm{
   box-sizing: border-box;
   height: 4rem;
   grid-column: 1/3;
   width: 100%;
 }
+
 .bmi__calculator {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
   position: relative;
   padding: 2rem;
   max-width:39rem;
   min-width:17.5rem;
+  filter: drop-shadow(16px 32px 56px rgba(0, 0, 0, 0.25));
+  border-radius: 1rem;
+  background: var(--pure-white);
+  row-gap:1.875rem;
 }
+
 .form__measurement {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -124,7 +176,32 @@ input::-webkit-inner-spin-button {
 input {
   margin: 0.25rem;
 }
+input {
+  cursor: pointer;
+}
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"]{
+  -webkit-text-stroke: 1px #D8E2E7;
+}
+
+input[type="number"]:active{
+  -webkit-text-stroke: 1px var(--blue);
+}
+
+input[type="radio"]{
+  transform:scale(2);
+  margin-right:1.25rem;
+  -webkit-text-stroke: 1px #6C9AA3;
+}
+
+input[type="radio"]:hover{
+  -webkit-text-stroke: 1px var(blue);
+}
 #height__ft,
 #height__in,
 #weight__st,
@@ -139,13 +216,18 @@ input {
 .bmi__calculator_value,.bmi__calculator_explain{
  display: none;
 }
+
+.bmi__calculator_result{
+  min-height: 9rem;
+  width: 100%;
+  margin: 1.5rem 0;
+  background: var(--blue);
+  padding: 2rem;
+  color:var(--pure-white);
+  border-radius: 1.5rem 39rem 39rem 1.5rem;
+}
 @media screen and (max-width: 375px) {
-  .bmi__calculator {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-  }
-  .form__measurement {
-    margin: 1.5rem;
+  .bmi__calculator_result{
+    border-radius: 1rem;
   }
 } 
