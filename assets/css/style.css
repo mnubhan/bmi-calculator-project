@@ -11,6 +11,9 @@
   --body-s:0.875rem;
 }
 
+body{
+  margin:0rem 8.75rem;
+}
 *,
 *::before,
 *::after {
@@ -192,7 +195,9 @@ input[type="number"]{
 input[type="number"]:active{
   -webkit-text-stroke: 1px var(--blue);
 }
-
+input[type="number"]:active{
+  -webkit-text-stroke: 1px var(--blue);
+}
 input[type="radio"]{
   transform:scale(2);
   margin-right:1.25rem;
@@ -202,6 +207,12 @@ input[type="radio"]{
 input[type="radio"]:hover{
   -webkit-text-stroke: 1px var(blue);
 }
+
+
+input[type="radio"]:hover{
+  -webkit-text-stroke: 1px var(blue);
+}
+
 #height__ft,
 #height__in,
 #weight__st,
