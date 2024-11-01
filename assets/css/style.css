@@ -288,6 +288,19 @@ main{
   width:100%;
 }
 
+.bmi__tips{
+  background-image:linear-gradient(315deg,rgba(214,230,254,100),rgba(214,252,254,0));
+  display:flex;
+  flex-flow:column wrap;
+  border-radius:2.25rem;
+  padding:4.5rem 7rem 6rem;
+}
+
+.bmi__tip{
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:space-between;
+}
 @media screen and (max-width:768px){
   body{
     padding:1rem;
@@ -331,5 +344,8 @@ main{
   .bmi__exp{
     grid-template-columns:repeat(1,1fr);
     column-gap:0;
+  }
+  .bmi__tips{
+    padding:3.5rem 1rem;
   }
 } 
