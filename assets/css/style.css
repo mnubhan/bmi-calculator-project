@@ -301,6 +301,14 @@ main{
   flex-flow:row wrap;
   justify-content:space-between;
 }
+
+.bmi__limit_heading_section {
+  display: flex;
+  flex-flow: row;
+}
+.bmi__limit_heading_section h5{
+  margin-left:1rem;
+}
 @media screen and (max-width:768px){
   body{
     padding:1rem;
