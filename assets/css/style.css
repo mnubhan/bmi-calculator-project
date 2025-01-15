@@ -125,7 +125,7 @@ body {
   box-sizing: border-box;
   height: 4rem;
   grid-column: 1/3;
-  width: 100%;
+  max-width: 100%;
 }
 
 .bmi__calculator {
