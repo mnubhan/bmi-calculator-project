@@ -99,16 +99,16 @@ body {
   width: 100%;
 }
 
-.metric{
-  display:flex;
-  column-gap:1.5rem;
+.metric {
+  display: flex;
+  column-gap: 1.5rem;
 }
 
 .bmi__input-height,
 .bmi__input-weight {
   display: grid;
   grid-auto-columns: 1fr;
-  column-gap: 0.2rem;
+  column-gap: 1.5rem;
 }
 
 .bmi__input-height > p,
@@ -145,7 +145,7 @@ body {
   border-radius: 1rem;
   background: var(--pure-white);
   row-gap: 1.875rem;
-  margin:1rem;
+  margin: 1rem;
 }
 
 .form__measurement {
@@ -315,7 +315,7 @@ main {
 }
 
 .bmi__limit {
-  box-shadow: 0.5rem 1rem 1.25rem 0.25rem #8faecf40;;
+  box-shadow: 0.5rem 1rem 1.25rem 0.25rem #8faecf40;
   border-radius: 1rem;
 }
 
@@ -359,7 +359,6 @@ main {
   .bmi__limits-main-content {
     margin-bottom: 3.5rem;
   }
-  
 }
 
 @media screen and (max-width: 375px) {
@@ -386,18 +385,24 @@ main {
     padding: 3.5rem 1rem;
   }
 
-  .bmi__limits{
-    margin:0 1rem;
+  .bmi__limits {
+    margin: 0 1rem;
   }
-  .bmi__limits_subs_content{
-    display:flex;
-    flex-flow:column;
-    row-gap:1rem;
+  .bmi__limits_subs_content {
+    display: flex;
+    flex-flow: column;
+    row-gap: 1rem;
   }
-  .bmi__limit{
-    padding:1.5rem;
+  .bmi__limit {
+    padding: 1.5rem;
   }
-  .metric{
-    display:block;
+  .metric {
+    display: block;
+  }
+  .bmi__input-height,
+  .bmi__input-weight {
+    display: grid;
+    grid-auto-columns: 1fr;
+    column-gap: 0.2rem;
   }
 }
