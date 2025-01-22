@@ -99,6 +99,11 @@ body {
   width: 100%;
 }
 
+.metric{
+  display:flex;
+  column-gap:1.5rem;
+}
+
 .bmi__input-height,
 .bmi__input-weight {
   display: grid;
@@ -391,5 +396,8 @@ main {
   }
   .bmi__limit{
     padding:1.5rem;
+  }
+  .metric{
+    display:block;
   }
 }

@@ -8,8 +8,11 @@ export function toggleMeasurementSystem(typeMeasurement) {
   let heightCm = document.querySelector(".height__cm");
   let heightFt = document.querySelector(".height__ft");
   let heightIn = document.querySelector(".height__in");
+  let formBMI = document.querySelector(".form__bmi");
   let imperialParams = [heightFt, heightIn, weightSt, weightLb];
   let metricParams = [weightKg, heightCm];
+
+  console.log(formBMI);
   if (typeMeasurement === "metric") {
     imperialParams.forEach((element) => {
       element.style.setProperty("display", "none");
@@ -17,6 +20,7 @@ export function toggleMeasurementSystem(typeMeasurement) {
     metricParams.forEach((element) => {
       element.style.setProperty("display", "block");
     });
+    formBMI.classList.add("metric");
   } else {
     imperialParams.forEach((element) => {
       element.style.setProperty("display", "inline-block");
@@ -29,5 +33,6 @@ export function toggleMeasurementSystem(typeMeasurement) {
       removeAlertInput(element.children[0]);
       removeAlertMessage(element.children[0]);
     });
+    formBMI.classList.remove("metric");
   }
 }
