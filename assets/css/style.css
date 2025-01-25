@@ -79,6 +79,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 0 0 2.125rem 2.125rem;
+  left:0;
 }
 
 .hero__section {
@@ -94,6 +95,7 @@ body {
 .image__logo {
   width: 4rem;
   aspect-ratio: 1/1;
+  margin-bottom:8rem;
 }
 
 .form__bmi {
@@ -147,6 +149,7 @@ body {
   background: var(--pure-white);
   row-gap: 1.875rem;
   margin: 1rem;
+  margin-top: 8rem;
 }
 
 .form__measurement {
@@ -269,7 +272,13 @@ input[type="radio"]:hover {
   height: 100%;
   border-radius: 0.75rem;
 }
-
+header {
+  position: relative;
+  display:grid;
+  grid-auto-columns:1fr;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap:2rem;
+}
 .bmi__calculator_value,
 .bmi__calculator_explain {
   display: none;
@@ -346,6 +355,9 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+  header {
+    display: block;
+  }
   body {
     padding: 1rem;
     justify-items: center;
@@ -355,12 +367,16 @@ main {
     text-align: center;
   }
 
+  .bmi__calculator{
+    margin-top: 0;
+  }
   .hero__section_background {
     border-radius: 0 0 2rem 2rem;
   }
 
   .image__logo {
     width: 2.5rem;
+    margin-bottom: 0;
   }
 
   .bmi__exp {
@@ -388,7 +404,6 @@ main {
   main {
     row-gap: 4.5rem;
   }
-
   .bmi__calculator_result {
     border-radius: 1rem;
   }
