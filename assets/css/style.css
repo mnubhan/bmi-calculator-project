@@ -66,7 +66,7 @@ body {
 
 .hero__section_background {
   position: absolute;
-  min-width: 23rem;
+  min-width: 25rem;
   max-width: 61rem;
   min-height: 40rem;
   max-height: 46rem;
@@ -79,7 +79,7 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 0 0 2.125rem 2.125rem;
-  left:0;
+  left: 0;
 }
 
 .hero__section {
@@ -95,7 +95,7 @@ body {
 .image__logo {
   width: 4rem;
   aspect-ratio: 1/1;
-  margin-bottom:8rem;
+  margin-bottom: 8rem;
 }
 
 .form__bmi {
@@ -272,12 +272,21 @@ input[type="radio"]:hover {
   height: 100%;
   border-radius: 0.75rem;
 }
-header {
+
+/* header {
   position: relative;
   display:grid;
   grid-auto-columns:1fr;
   grid-template-columns: repeat(2, 1fr);
   column-gap:2rem;
+} */
+
+.hero__section_content {
+  position: relative;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
 }
 .bmi__calculator_value,
 .bmi__calculator_explain {
@@ -355,8 +364,13 @@ main {
 }
 
 @media screen and (max-width: 768px) {
-  header {
+  /* header {
     display: block;
+  } */
+  .hero__section_content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
   }
   body {
     padding: 1rem;
@@ -367,7 +381,7 @@ main {
     text-align: center;
   }
 
-  .bmi__calculator{
+  .bmi__calculator {
     margin-top: 0;
   }
   .hero__section_background {
@@ -388,10 +402,10 @@ main {
     margin-bottom: 3.5rem;
   }
 
-  .hero__section_background {
+  /* .hero__section_background {
     left: 50%;
     transform: translateX(-50%);
-  }
+  } */
 }
 
 @media screen and (max-width: 375px) {
