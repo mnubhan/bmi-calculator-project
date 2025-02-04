@@ -8,103 +8,105 @@
   </head>
   <body>
     <header>
-      <div class="hero__section">
-        <div class="hero__section_background"></div>
-        <img
-          src="assets/images/logo.svg"
-          alt="Website Logo"
-          class="image__logo"
-        />
-        <h1 class="heading__xl">Body Mass Index Calculator</h1>
-        <p class="body__m">
-          Better understand your weight in relation to your height using our
-          body mass index (BM) calculator. While BMI is not the sole determinant
-          of a healthy weight, it offers a valuable starting point to evaluate
-          your overall health and well-being.
-        </p>
-      </div>
-      <div class="bmi__calculator">
-        <p class="heading__m">Enter your details below</p>
-        <form class="form__measurement">
-          <div>
-            <input type="radio" id="metric" name="measurement" checked />
-            <label for="metric body__m body__m_bold">Metric</label>
-          </div>
-          <div>
-            <input type="radio" id="imperial" name="measurement" />
-            <label for="imperial body__m body__m_bold">Imperial</label>
-          </div>
-        </form>
-        <form class="form__bmi metric">
-          <div class="bmi__input-height">
-            <p class="body__s">Height</p>
-            <label class="height__cm">
-              <input
-                type="number"
-                id="height__cm"
-                class="bmi-calculator__input-height heading__m"
-              />
-            </label>
-            <label class="height__ft">
-              <input
-                type="number"
-                id="height__ft"
-                class="bmi-calculator__input-height heading__m"
-              />
-            </label>
-            <label class="height__in">
-              <input
-                type="number"
-                id="height__in"
-                class="bmi-calculator__input-height heading__m"
-              />
-            </label>
-          </div>
+      <div class="hero__section_background"></div>
+      <div class="hero__section_content">
+        <div class="hero__section">
+          <img
+            src="assets/images/logo.svg"
+            alt="Website Logo"
+            class="image__logo"
+          />
+          <h1 class="heading__xl">Body Mass Index Calculator</h1>
+          <p class="body__m">
+            Better understand your weight in relation to your height using our
+            body mass index (BM) calculator. While BMI is not the sole
+            determinant of a healthy weight, it offers a valuable starting point
+            to evaluate your overall health and well-being.
+          </p>
+        </div>
+        <div class="bmi__calculator">
+          <p class="heading__m">Enter your details below</p>
+          <form class="form__measurement">
+            <div>
+              <input type="radio" id="metric" name="measurement" checked />
+              <label for="metric body__m body__m_bold">Metric</label>
+            </div>
+            <div>
+              <input type="radio" id="imperial" name="measurement" />
+              <label for="imperial body__m body__m_bold">Imperial</label>
+            </div>
+          </form>
+          <form class="form__bmi metric">
+            <div class="bmi__input-height">
+              <p class="body__s">Height</p>
+              <label class="height__cm">
+                <input
+                  type="number"
+                  id="height__cm"
+                  class="bmi-calculator__input-height heading__m"
+                />
+              </label>
+              <label class="height__ft">
+                <input
+                  type="number"
+                  id="height__ft"
+                  class="bmi-calculator__input-height heading__m"
+                />
+              </label>
+              <label class="height__in">
+                <input
+                  type="number"
+                  id="height__in"
+                  class="bmi-calculator__input-height heading__m"
+                />
+              </label>
+            </div>
 
-          <div class="bmi__input-weight">
-            <p class="body__s">Weigth</p>
-            <label class="weight__kg">
-              <input
-                type="number"
-                id="weight__kg"
-                class="bmi-calculator__input-weight heading__m"
-              />
-            </label>
-            <label class="weight__st">
-              <input
-                type="number"
-                id="weight__st"
-                class="bmi-calculator__input-weight heading__m"
-              />
-            </label>
-            <label class="weight__lb">
-              <input
-                type="number"
-                id="weight__lb"
-                class="bmi-calculator__input-weight heading__m"
-              />
-            </label>
-          </div>
-        </form>
-        <div class="bmi__calculator_result">
-          <div class="bmi__calculator_info">
-            <p class="heading__m">Welcome!</p>
-            <p class="body__s">
-              Enter your height and weight and you'll see your BMI result here
-            </p>
-          </div>
-          <div class="bmi__calculator_value">
-            <p class="body__m body__m_bold">Your BMI is..</p>
-            <p class="heading__xl bmi__value">23.4</p>
-          </div>
-          <div class="bmi__calculator_explain">
-            <p class="body__s bmi__explain">
-              Your BMI suggests you're a healthy weight. Your ideal weight is
-              between
-              <span class="body__s_bold weight__healthy-range body__m_bold"
-                >63.3kgs-85.2kgs</span
-              >.
-            </p>
+            <div class="bmi__input-weight">
+              <p class="body__s">Weigth</p>
+              <label class="weight__kg">
+                <input
+                  type="number"
+                  id="weight__kg"
+                  class="bmi-calculator__input-weight heading__m"
+                />
+              </label>
+              <label class="weight__st">
+                <input
+                  type="number"
+                  id="weight__st"
+                  class="bmi-calculator__input-weight heading__m"
+                />
+              </label>
+              <label class="weight__lb">
+                <input
+                  type="number"
+                  id="weight__lb"
+                  class="bmi-calculator__input-weight heading__m"
+                />
+              </label>
+            </div>
+          </form>
+          <div class="bmi__calculator_result">
+            <div class="bmi__calculator_info">
+              <p class="heading__m">Welcome!</p>
+              <p class="body__s">
+                Enter your height and weight and you'll see your BMI result here
+              </p>
+            </div>
+            <div class="bmi__calculator_value">
+              <p class="body__m body__m_bold">Your BMI is..</p>
+              <p class="heading__xl bmi__value">23.4</p>
+            </div>
+            <div class="bmi__calculator_explain">
+              <p class="body__s bmi__explain">
+                Your BMI suggests you're a healthy weight. Your ideal weight is
+                between
+                <span class="body__s_bold weight__healthy-range body__m_bold"
+                  >63.3kgs-85.2kgs</span
+                >.
+              </p>
+            </div>
           </div>
         </div>
       </div>
