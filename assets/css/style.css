@@ -405,7 +405,7 @@ main {
   .bmi__tip {
     display: flex;
     flex-flow: row;
-    row-gap: 2.5rem;
+    column-gap: 2.5rem;
   }
 
   .bmi__limits-main-content {
