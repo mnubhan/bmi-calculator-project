@@ -350,9 +350,6 @@ main {
 }
 
 .bmi__tip {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
 }
 
 .bmi__limit-heading-section {
@@ -393,6 +390,13 @@ main {
     margin-bottom: 0;
   }
 
+  .bmi__tip {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    column-gap: 2.5rem;
+  }
+
   .bmi__exp {
     column-gap: 6rem;
     padding: 0;
@@ -429,6 +433,12 @@ main {
 
   .bmi__tips {
     padding: 3.5rem 1rem;
+  }
+
+  .bmi__tip {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
   }
 
   .bmi__limits {
